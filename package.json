@@ -1,0 +1,43 @@
+{
+  "name": "@phonophant/vlc-player",
+  "version": "1.0.0",
+  "description": "This player plugin will use VLC to serve audio content.",
+  "main": "./build/main.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Christian Bühlmeyer",
+  "license": "MIT",
+  "devDependencies": {
+    "@phonophant/shared-models": "1.0.0",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "piral-cli-webpack5": "0.15",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "jest": "^29.3.1",
+    "net": "^1.0.2",
+    "ts-jest": "^29.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
